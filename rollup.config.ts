@@ -1,4 +1,7 @@
-import resolve from 'rollup-plugin-node-resolve'
+
+
+// import resolve from 'rollup-plugin-node-resolve' // 找不到types会报错，所以换成require
+const resolve = require('rollup-plugin-node-resolve')
 import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
 import camelCase from 'lodash.camelcase'
