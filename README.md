@@ -26,3 +26,28 @@
 3. 处理之后的`key:value`保存在`vlaues:string[]`中
 4. values.join('&')
 5. url进行`丢弃hash`和`保留之前参数`处理
+
+## 实现data的传递
+
+[x] 普通对象需要默认添加`'Content-Type':'application/json;charset=utf-8'`,复杂对象直接使用
+  - [x] 传入的headers需要被标准化,比如`content-type`需要转成`Content-Type`
+
+优化点： !data&&headers['content-type'],delete headers['content-type']
+
+## 获取响应数据（通过promise获取返回值）
+
+返回值
+
+[x] response
+  - [x] status && statusText
+  - [x] data:response && responseText,根据responseType来决定
+  - [x] headers:xhr.getAllResponseHeaders()
+[x] request = xhr
+[x] config
+
+还要完善的点
+
+- data默认返回是string类型
+- headers返回是string类型
+
+

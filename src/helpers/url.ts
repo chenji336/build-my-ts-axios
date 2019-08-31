@@ -1,4 +1,4 @@
-import { isDate, isObject } from 'util'
+import { isDate, isPlainObject } from './util'
 
 export function buildURL(url: string, params?: any): string {
   if (!params) {
@@ -26,7 +26,7 @@ export function buildURL(url: string, params?: any): string {
       // 时间情况
       if (isDate(val)) {
         val = val.toISOString()
-      } else if (isObject(val)) {
+      } else if (isPlainObject(val)) {
         // 对象情况
         val = JSON.stringify(val)
       }
