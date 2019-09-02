@@ -45,7 +45,7 @@
 [x] request = xhr
 [x] config
 
-还要完善的点
+还要完善的点(已经完成)
 
 - data默认返回是string类型
 - headers返回是string类型
